@@ -1,9 +1,10 @@
-username = document.getElementById("name");
-email = document.getElementById("email");
-occasion = document.getElementById("occasion");
-month = document.getElementById("month");
-day = document.getElementById("day");
-year = document.getElementById("year");
+
+let username = document.getElementById("name");
+let email = document.getElementById("email");
+let occasion = document.getElementById("occasion");
+let month = document.getElementById("month");
+let day = document.getElementById("day");
+let year = document.getElementById("year");
 
 function checkDate(day, month, year) {
     let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
