@@ -89,6 +89,7 @@
     }
 }
 
+
 @media (566px <= width <= 840px) {
     .boxed {
         margin-left: 25vw;
@@ -114,4 +115,3 @@
 .demo-card-wide>.mdl-card__menu {
     color: #fff;
 }
-
