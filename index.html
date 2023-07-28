@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="logic.js"></script>
     <title>Sign up!</title>
 </head>
 
 <body>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="popup">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Hudukians!</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            You are Awesome🤘. Share with your friends and family.
+        </div>
+        <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+            </button>
+        </div>
+    </div>
     <div class="background">
+        
         <div class="boxed">
             <div class="logo row"><span>Huduk</span></div>
             <div class="info row"><span>Enter your details</span></div>
@@ -22,11 +35,13 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label row inputfiled">
                         <input class="mdl-textfield__input" type="text" id="name" autocomplete="name">
                         <label class="mdl-textfield__label" for="name">Name</label>
+                        <span class="mdl-textfield__error">Invalid name!</span>
                     </div>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label row inputfiled">
                         <input class="mdl-textfield__input" type="text" id="email" autocomplete="email">
                         <label class="mdl-textfield__label" for="email">Email</label>
+                        <span class="mdl-textfield__error">Invalid email</span>
                     </div>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label row inputfiled">
@@ -73,16 +88,20 @@
                     </div>
 
                     <div class="row submit">
-                        <button
-                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                        <button type="button" onclick="checkRequiredFields()"
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored load"
+                            id="submit">
                             Submit
                         </button>
+                        <div class="mdl-spinner mdl-js-spinner is-active load" id="spinner"></div>
                     </div>
+
                 </div>
             </form>
 
         </div>
     </div>
 </body>
+<script src="logic.js"></script>
 
 </html>

@@ -36,7 +36,6 @@
 
 .datefamily {
     width: 30%;
-    /* change it  */
 }
 
 .datediv {
@@ -63,6 +62,17 @@
     justify-content: flex-end;
 }
 
+#popup {
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    width: 40vw;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
 @media (max-width: 565px) {
     .boxed {
         margin-top: 5vh;
@@ -72,6 +82,11 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+    #popup {
+        width: 100vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
 }
 
 @media (566px <= width <= 840px) {
@@ -79,4 +94,24 @@
         margin-left: 25vw;
         margin-right: 25vw;
     }
+    #popup {
+        width: 60vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
 }
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+
+.demo-card-wide>.mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('Thankyou.jpg') center / cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
