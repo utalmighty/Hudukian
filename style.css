@@ -65,12 +65,18 @@
 
 @media (max-width: 565px) {
     .boxed {
-        /* based on size */
         margin-top: 5vh;
         padding-right: 20px;
         padding-left: 20px;
         border: 0px;
         margin-left: 0px;
         margin-right: 0px;
+    }
+}
+
+@media (566px <= width <= 840px) {
+    .boxed {
+        margin-left: 25vw;
+        margin-right: 25vw;
     }
 }
