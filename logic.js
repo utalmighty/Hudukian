@@ -40,7 +40,14 @@ function post() {
             "Content-type": "application/json; charset=UTF-8"
         }
     }).then(resp => processResponse(resp))
-    .catch (error => alert("Something went wrong!"));
+    .catch (error => processError(error));
+}
+
+function processError(error) {
+    console.log(error);
+    submit.style.display = "block";
+    spinner.style.display = "None";
+    alert("Hmm! Something went wrong!");
 }
 
 function processResponse(resp) {
