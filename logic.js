@@ -52,6 +52,7 @@ function processResponse(resp) {
         popup.style.visibility = "initial";
         popup.style.opacity = 1;
         submit.disabled = true;
+        document.title = "Thanks for signing up!";
         return;
     };
     if (resp.status>=400 && resp.status<500) return alert("Bad Request!");
