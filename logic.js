@@ -28,7 +28,7 @@ function post() {
     submit.style.display = "None";
     spinner.style.display = "block";
     let date = prepareDate()
-    fetch("https://wellwisherproducer-wellwisherteam2023.b4a.run/producer/api/v1/subscribe", {
+    fetch("https://producer1-producerwellwisherteam2023.b4a.run/producer/api/v1/subscribe", {
         method: "POST",
         body: JSON.stringify({
             "name": username.value.trim(),
